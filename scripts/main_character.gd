@@ -4,7 +4,10 @@ extends CharacterBody2D
 const SPEED = 250.0
 const JUMP_VELOCITY = -900.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
+func play_pickup_sound():
+	audio_stream_player_2d.play()
 
 func _physics_process(delta: float) -> void:
 	# Animations
